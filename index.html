@@ -25,27 +25,37 @@
     <link rel="stylesheet" href="./styles/bubbles.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="">關於JanSix</a></li>
-        <li><a href="mailto:shiu2329@gmail.com">聯絡方式</a></li>
-        <li>
-          <a target="_blank" href="https://chess-ashy.vercel.app/index.html"
-            >西洋棋網站</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://korea-travel-five.vercel.app/"
-            >韓國旅遊網</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://mern-project-client-ruby.vercel.app/"
-            >講座開課與報名系統</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">關於JanSix</a></li>
+          <li><a href="mailto:shiu2329@gmail.com">聯絡方式</a></li>
+
+          <li>
+            <a target="_blank" href="https://chess-ashy.vercel.app/index.html"
+              >西洋棋網站</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://korea-travel-five.vercel.app/"
+              >韓國旅遊網</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://mern-project-client-ruby.vercel.app/"
+              >講座開課與報名系統</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
 
     <main>
       <div id="background-wrap">
@@ -179,6 +189,17 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector("ul");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>

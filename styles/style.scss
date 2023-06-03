@@ -14,26 +14,48 @@ h6 {
   font-weight: normal;
 }
 
+.hamburger {
+  display: none;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
 body {
   overflow-x: hidden;
-  nav {
+  header {
     background-color: white;
     position: sticky;
     top: 0;
     z-index: 5;
-
-    ul {
+    nav {
       display: flex;
-      li {
-        list-style-type: none;
-        margin: 1rem;
-        a {
-          color: black;
-          text-decoration: none;
-          transition: all 0.1s ease;
-          font-size: 1.5rem;
-          &:hover {
-            color: rgb(54, 212, 138);
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        display: flex;
+        margin-bottom: 0;
+        li {
+          list-style-type: none;
+          margin: 1rem;
+          a {
+            color: black;
+            text-decoration: none;
+            transition: all 0.1s ease;
+            font-size: 1.5rem;
+            &:hover {
+              color: rgb(54, 212, 138);
+            }
           }
         }
       }
@@ -184,8 +206,40 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   body {
+    header {
+      nav {
+        .active {
+          left: 0;
+        }
+        .hamburger {
+          display: block;
+        }
+        ul {
+          position: fixed;
+          left: -100%;
+          top: 45px;
+          flex-direction: column;
+          background-color: #fff;
+          width: 100%;
+          border-radius: 10px;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+          li {
+            margin: 0;
+            ::after {
+              content: "";
+              display: block;
+              border-top: 1px solid gray;
+              margin: 0.3rem 0;
+            }
+          }
+        }
+      }
+    }
+
     main {
       section.main-area {
         div.info {
@@ -228,10 +282,11 @@ body {
 
 @media screen and (max-width: 500px) {
   body {
-    nav {
-      position: static;
-      ul {
-        flex-direction: column;
+    header {
+      nav {
+        position: static;
+        ul {
+        }
       }
     }
   }
