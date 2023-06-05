@@ -30,7 +30,6 @@ Password :123456
 - 透過 Node.js、Express、MongoDB 架設後端伺服器
 - RESTful API 架構實踐專案功能
 - 使用 Axios 套件調用 API
-- 嵌入 Google 地圖
+- 嵌入 Google mpa、Google chart 套件
 - 以 Vercel 進行前後端部署
 - 使用 JWT 的 Stateless 驗證技術
-- 實現 Google OAuth 第三方登入驗證
