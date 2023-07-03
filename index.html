@@ -14,13 +14,14 @@
     <base target="_self" />
     <!-- 網頁描述 -->
     <meta name="description" content="" />
-    <title>Jan Six的個人網頁</title>
+    <title>Hugh的個人網頁</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="./styles/bubbles.css" />
   </head>
@@ -28,30 +29,20 @@
     <header>
       <nav>
         <ul>
-          <li><a href="">關於JanSix</a></li>
+          <li><a href="">關於Hugh</a></li>
           <li><a href="mailto:shiu2329@gmail.com">聯絡方式</a></li>
 
           <li>
-            <a target="_blank" href="https://chess-ashy.vercel.app/index.html"
-              >西洋棋網</a
-            >
+            <a target="_blank" href="https://chess-ashy.vercel.app/index.html">西洋棋網</a>
           </li>
           <li>
-            <a target="_blank" href="https://korea-travel-five.vercel.app/"
-              >韓國旅遊網</a
-            >
+            <a target="_blank" href="https://korea-travel-five.vercel.app/">韓國旅遊網</a>
           </li>
           <li>
-            <a
-              target="_blank"
-              href="https://mern-project-client-ruby.vercel.app/"
-              >講座系統</a
-            >
+            <a target="_blank" href="https://mern-project-client-ruby.vercel.app/">講座系統</a>
           </li>
           <li>
-            <a target="_blank" href="https://netflix-react-firebase.vercel.app/"
-              >Netflix</a
-            >
+            <a href="#resume">介紹</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -59,11 +50,14 @@
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
+        <div class="moon-icon">
+          <i class="ri-moon-fill"></i>
+        </div>
       </nav>
     </header>
 
     <main>
-      <div id="background-wrap">
+      <!-- <div id="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
         <div class="bubble x3"></div>
@@ -74,14 +68,12 @@
         <div class="bubble x8"></div>
         <div class="bubble x9"></div>
         <div class="bubble x10"></div>
-      </div>
+      </div> -->
       <section class="main-area">
         <div class="info">
-          <h1>嗨，我是JanSix！</h1>
-          <h2>我是一位網頁工程師，曾任網頁開發PM、廣告行銷PM、企劃。</h2>
-          <a target="_blank" href="https://github.com/Jansix/ResumeProject"
-            >了解更多</a
-          >
+          <h1>嗨，我是Hugh！</h1>
+          <h2>我是一位網頁前端工程師，曾任網頁開發PM、廣告業PM、行銷企劃。</h2>
+          <a target="_blank" href="https://github.com/Jansix/ResumeProject">了解更多</a>
         </div>
         <img src="./pictures/綠背景照片.png" alt="個人照片" />
       </section>
@@ -95,30 +87,28 @@
 
         <div class="progress-area">
           <p>
-            我的前端開發技能有<samp style="font-weight: 600"
-              >JavaScript、HTML、CSS、React、NextJs</samp
-            >
+            我的前端開發技能有<samp style="font-weight: 600">JavaScript、HTML、CSS、React、NextJs</samp>
             , 因Side Project所需也有學習一些後端技術。
           </p>
         </div>
       </section>
 
-      <section class="resume">
+      <section class="resume" id="resume">
         <section class="table">
           <table>
-            <tr style="border-top: 2px solid gray">
-              <td style="width: 20%">自我簡介</td>
+            <tr class="table-top-line">
+              <td style="width: 20%; font-size: 1.4rem; font-weight: bold">自我簡介</td>
               <td style="width: 80%">
                 我叫李孟修，1994年出生的宜蘭人。興趣是了解資訊科技、3C、各類影視作品，喜歡旅遊、電玩、桌遊，因為網頁PM的經歷對近10年來興起的前端技術感興趣，從今年三月開始自學成為前端工程師。
               </td>
             </tr>
 
             <tr>
-              <td>學歷</td>
+              <td style="font-size: 1.4rem; font-weight: bold">學歷</td>
               <td>資訊工程系學士</td>
             </tr>
             <tr>
-              <td>經歷</td>
+              <td style="font-size: 1.4rem; font-weight: bold">經歷</td>
               <td>
                 <ul>
                   <li><samp>2018</samp> 專案執行</li>
@@ -129,7 +119,7 @@
               </td>
             </tr>
             <tr>
-              <td>語言</td>
+              <td style="font-size: 1.4rem; font-weight: bold">語言</td>
               <td>
                 <ul>
                   <li>中文:精通</li>
@@ -140,38 +130,23 @@
             </tr>
 
             <tr>
-              <td>專長</td>
+              <td style="font-size: 1.4rem; font-weight: bold">專長</td>
               <td>
                 <img src="./ICONS/icons8-html-5.svg" alt="HTML5" />
                 <img src="./ICONS/icons8-css3.svg" alt="CSS3" />
                 <img src="./ICONS/icons8-javascript.svg" alt="JavaScript" />
 
                 <img src="./ICONS/icons8-react-native.svg" alt="React" />
-                <img
-                  src="./ICONS/pmdek8ib.png"
-                  alt="NextJs"
-                  width="48vmax"
-                  height="48vmax"
-                />
-                <img
-                  src="./ICONS/nextjs-icon-svgrepo-com.svg"
-                  alt="NextJs"
-                  width="48vmax"
-                  height="48vmax"
-                />
-                <img
-                  src="./ICONS/Bootstrap_logo.svg.png"
-                  alt="NextJs"
-                  width="60vmax"
-                  height="48vmax"
-                />
+                <img src="./ICONS/pmdek8ib.png" alt="NextJs" width="48vmax" height="48vmax" />
+                <img src="./ICONS/nextjs-icon-svgrepo-com.svg" alt="NextJs" width="48vmax" height="48vmax" />
+                <img src="./ICONS/Bootstrap_logo.svg.png" alt="NextJs" width="60vmax" height="48vmax" />
               </td>
             </tr>
 
             <tr>
-              <td>開發經驗</td>
+              <td style="font-size: 1.4rem; font-weight: bold">開發經驗</td>
               <td>
-                我製作過幾個網頁前端專案，用Figma畫出網頁架構、設計使用者UI/UX設計、以HTML做出基本網頁架構、CSS將網頁前端美化以及提升使用外觀。另外學習使用Firebase為後端伺服器復刻Netflix網站首頁。
+                我製作過幾個網頁前端專案，用Figma畫出網頁架構、設計使用者UI/UX設計、以HTML做出基本網頁架構、CSS將網頁前端美化以及提升使用外觀。
                 <hr />
                 也曾有獨立開發過一個MERN專案，架設server、編寫API並設計前端介面串接，前端使用React框架,後端透過Node.js搭配Express、MongoDB進行開發，並導入JWT的Stateless驗證的技術搭建會員登入系統。
                 <hr />
@@ -188,23 +163,68 @@
           <div class="greenRect3"></div>
         </section>
       </section>
+      <footer>
+        <div class="footer">
+          <a href="#">2023 © Hugh li All Rights Reserved. </a>
+          <div h class="icon">
+            <i class="ri-arrow-up-circle-fill"></i>
+          </div>
+        </div>
+      </footer>
     </main>
     <!-- JavaScript Bundle with Popper -->
+    <script>
+      const toTop = document.querySelector('.icon');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+          toTop.classList.add('see');
+        } else toTop.classList.remove('see');
+      });
+
+      toTop.addEventListener('click', backToTop);
+      function backToTop() {
+        window.scrollTo(0, 0);
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
     <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector("ul");
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('ul');
 
-      hamburger.addEventListener("click", mobileMenu);
+      hamburger.addEventListener('click', mobileMenu);
 
       function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
       }
+    </script>
+
+    <script>
+      // 設置模式切換icon
+      const mode = document.querySelector('.moon-icon');
+      const icon = document.querySelector('.moon-icon i');
+      mode.addEventListener('click', () => {
+        if (icon.classList[0] == 'ri-moon-fill') {
+          icon.classList.add('ri-sun-line');
+          icon.classList.remove('ri-moon-fill');
+        } else {
+          icon.classList.add('ri-moon-fill');
+          icon.classList.remove('ri-sun-line');
+        }
+      });
+
+      //設置模式切換實際功能
+      const root = document.documentElement;
+      mode.onclick = function () {
+        root.classList.toggle('toChang');
+      };
+
+      const isMoon = icon.classList.contains('ri-moon-fill');
     </script>
     <script src="./app.js"></script>
   </body>

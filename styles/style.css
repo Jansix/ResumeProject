@@ -14,6 +14,38 @@ h6 {
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bar-color: #101010;
+  --header-background-color: white;
+  --nav-hover: rgb(54, 212, 138);
+  --font-color: black;
+  --about-me-color: rgb(231, 255, 233);
+  --table-hover-color: rgb(184, 255, 222);
+  --table-line-color: gray;
+  --picture-line: rgb(195, 255, 200);
+  --footer-bgc: #d9ffd8;
+  --table-font-hover: #101010;
+  --icon-color: #101010;
+}
+
+.toChang {
+  --bar-color: white;
+  --header-background-color: #3a3939;
+  --nav-hover: rgb(54, 212, 138);
+  --font-color: white;
+  --about-me-color: rgb(255, 203, 143);
+  --table-hover-color: rgb(184, 255, 222);
+  --table-line-color: gray;
+  --picture-line: rgb(195, 255, 200);
+  --footer-bgc: rgba(143, 234, 255, 1);
+  --table-font-hover: #101010;
+  --icon-color: rgb(184, 255, 222);
+}
+
 .hamburger {
   display: none;
   margin-left: 1rem;
@@ -26,14 +58,14 @@ h6 {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: var(--bar-color);
 }
 
 body {
   overflow-x: hidden;
 }
 body header {
-  background-color: white;
+  background-color: var(--header-background-color);
   position: sticky;
   top: 0;
   z-index: 5;
@@ -44,6 +76,7 @@ body header nav {
   align-items: center;
 }
 body header nav ul {
+  flex: 4 0 auto;
   display: flex;
   margin-bottom: 0;
 }
@@ -52,17 +85,25 @@ body header nav ul li {
   margin: 1rem;
 }
 body header nav ul li a {
-  color: black;
+  color: var(--font-color);
   text-decoration: none;
   transition: all 0.1s ease;
   font-size: 1.5rem;
 }
 body header nav ul li a:hover {
-  color: rgb(54, 212, 138);
+  color: var(--nav-hover);
+}
+body header nav .moon-icon {
+  margin: 1rem;
+  cursor: pointer;
+}
+body header nav .moon-icon i {
+  font-size: 2rem;
+  color: var(--icon-color);
 }
 body main section.main-area {
   min-height: 70vh;
-  background-color: white;
+  background-color: var(--header-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,14 +114,17 @@ body main section.main-area div.info {
 }
 body main section.main-area div.info h1 {
   font-size: 3.5rem;
+  color: var(--font-color);
+  font-weight: bold;
 }
 body main section.main-area div.info h2 {
+  color: var(--font-color);
   font-size: 1.5rem;
 }
 body main section.main-area div.info a {
-  color: white;
-  background-color: rgb(54, 212, 138);
-  padding: 0.25rem 0.5rem;
+  color: var(--header-background-color);
+  background-color: var(--nav-hover);
+  padding: 0.25rem 2rem;
   font-size: 1.5rem;
   border-radius: 20px;
   display: inline-block;
@@ -89,14 +133,17 @@ body main section.main-area div.info a {
   transition: all 0.2s ease;
 }
 body main section.main-area div.info a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+body main section.main-area div.info a:active {
+  transform: scale(0.8);
 }
 body main section.main-area img {
   flex-basis: 300px;
   width: 30vw;
 }
 body main section.about-me {
-  background-color: rgb(231, 255, 233);
+  background-color: var(--about-me-color);
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -108,38 +155,48 @@ body main section.about-me div.desc {
 }
 body main section.about-me div.desc h2 {
   font-size: 2.3rem;
+  color: --table-font-hover;
 }
 body main section.about-me div.desc p {
   font-size: 1rem;
+  color: --table-font-hover;
 }
 body main section.about-me div.progress-area p {
+  color: --table-font-hover;
   margin: 0.5rem 0rem;
   font-size: 1.3rem;
-}
-body main section.about-me div.progress-area .progress-bar-area {
-  margin-top: 2rem;
 }
 body main section.resume {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
+  background-color: var(--header-background-color);
 }
 body main section.resume section.table {
   flex: 5 1 500px;
   padding: 2rem;
+  z-index: 1;
 }
 body main section.resume section.table table {
   border-collapse: collapse;
 }
+body main section.resume section.table table tr.table-top-line {
+  border-top: 2px solid var(--table-line-color);
+}
 body main section.resume section.table table tr {
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid var(--table-line-color);
   transition: all 0.2s ease;
+  color: var(--font-color);
 }
 body main section.resume section.table table tr:hover {
-  background-color: rgb(184, 255, 222);
+  background-color: var(--about-me-color);
+  color: var(--table-font-hover);
 }
 body main section.resume section.table table tr td {
   padding: 1rem;
+}
+body main section.resume section.table table tr td hr {
+  border-color: var(--table-line-color);
 }
 body main section.resume section.table table tr td ul li samp {
   font-weight: 600;
@@ -147,14 +204,18 @@ body main section.resume section.table table tr td ul li samp {
 body main section.resume section.picture {
   flex: 1 1 500px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body main section.resume section.picture img {
-  width: 30vw;
+  width: 90%;
+  border-radius: 10px;
 }
 body main section.resume section.picture div.greenRect {
   width: 30vw;
   height: 90vh;
-  border: 10px solid rgb(195, 255, 200);
+  border: 10px solid var(--picture-line);
   position: absolute;
   top: 30px;
   left: 80px;
@@ -163,7 +224,7 @@ body main section.resume section.picture div.greenRect {
 body main section.resume section.picture div.greenRect2 {
   width: 50vw;
   height: 40vh;
-  border: 10px solid rgb(195, 255, 200);
+  border: 10px solid var(--picture-line);
   position: absolute;
   top: 300px;
   left: -300px;
@@ -172,26 +233,62 @@ body main section.resume section.picture div.greenRect2 {
 body main section.resume section.picture div.greenRect3 {
   width: 50vw;
   height: 40vh;
-  border: 10px solid rgb(195, 255, 200);
+  border: 10px solid var(--picture-line);
   position: absolute;
   top: 0px;
   left: -100px;
   z-index: -1;
 }
+body main footer .footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-bgc);
+  bottom: 0;
+}
+body main footer .footer a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--table-font-hover);
+  padding: 0.5rem;
+}
+body main footer .footer .icon {
+  opacity: 0%;
+  transition: all 1s ease;
+  cursor: pointer;
+  color: var(--bar-color);
+}
+body main footer .footer .icon i {
+  font-size: 4rem;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  transition: all 0.2s ease;
+}
+body main footer .footer .icon i:active {
+  transform: scale(0.8);
+}
+body main footer .footer .see {
+  opacity: 100%;
+}
 
 @media screen and (max-width: 880px) {
   body header nav .active {
     left: 0;
+    top: 65px;
   }
   body header nav .hamburger {
     display: block;
+    bottom: 0.7rem;
   }
   body header nav ul {
     position: fixed;
     left: -100%;
     top: 45px;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--header-background-color);
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -212,6 +309,7 @@ body main section.resume section.picture div.greenRect3 {
   }
   body main section.main-area img {
     width: 90%;
+    padding: 1.5rem;
   }
   body main section.about-me {
     padding: 1rem 0.5rem;
