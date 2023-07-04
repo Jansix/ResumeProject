@@ -29,6 +29,7 @@ html {
   --footer-bgc: #d9ffd8;
   --table-font-hover: #101010;
   --icon-color: #101010;
+  --card-bgc: #e4f1e4;
 }
 
 .toChang {
@@ -43,6 +44,7 @@ html {
   --footer-bgc: rgba(143, 234, 255, 1);
   --table-font-hover: #101010;
   --icon-color: rgb(184, 255, 222);
+  --card-bgc: rgba(247, 237, 215, 1);
 }
 
 .hamburger {
@@ -63,6 +65,8 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--header-background-color);
+
   header {
     background-color: var(--header-background-color);
     position: sticky;
@@ -106,7 +110,7 @@ body {
   main {
     section.main-area {
       min-height: 70vh;
-      background-color: var(--header-background-color);
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -184,12 +188,11 @@ body {
     section.resume {
       display: flex;
       flex-wrap: wrap;
-      padding: 2rem;
-      background-color: var(--header-background-color);
+      padding: 2rem 2rem 0rem 2rem;
 
       section.table {
         flex: 5 1 500px;
-        padding: 2rem;
+        // padding: 2rem;
         z-index: 1;
         table {
           border-collapse: collapse;
@@ -262,6 +265,95 @@ body {
           left: -100px;
           z-index: -1;
         }
+        div.greenRect-no {
+          display: none;
+        }
+      }
+    }
+
+    section.demo {
+      scroll-margin-top: 100px; //錨點定位往下移動100px
+      display: flex;
+      margin: 2rem auto;
+      max-width: 1440px;
+      flex-wrap: wrap-reverse;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      background-color: var(--card-bgc);
+
+      .description {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          list-style: none;
+          gap: 1.5rem;
+          li {
+            h2 {
+              font-size: 3rem;
+              font-weight: bold;
+              color: #003470;
+            }
+          }
+          li {
+            p {
+              color: var(---table-font-hover);
+              .text-list {
+                font-weight: bold;
+                color: brown;
+                font-size: 1.2rem;
+              }
+            }
+          }
+          li {
+            position: relative;
+            a {
+              text-decoration: none;
+              font-size: 2rem;
+              font-weight: bold;
+              position: absolute;
+              left: 0;
+              top: -20px;
+              color: var(--header-background-color);
+              background-color: var(--nav-hover);
+              padding: 0.25rem 2rem;
+              font-size: 1.5rem;
+              border-radius: 20px;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+              &:active {
+                transform: scale(0.8);
+              }
+            }
+          }
+        }
+      }
+      .picture-demo {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .pictureSize {
+          margin: 2rem;
+          display: flex;
+          justify-content: center; /* 水平居中 */
+          align-items: center; /* 垂直居中 */
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+          }
+        }
       }
     }
 
@@ -301,6 +393,21 @@ body {
 
       .see {
         opacity: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  body {
+    main {
+      section.resume {
+        section.picture {
+          display: none;
+        }
+      }
+      section.demo {
+        margin: 1.6rem 0.7rem;
       }
     }
   }
@@ -376,6 +483,19 @@ body {
           div.greenRect2,
           div.greenRect3 {
             display: none;
+          }
+        }
+      }
+
+      section.demo {
+        .description {
+          flex: 1 1 100%;
+        }
+        .picture-demo {
+          flex: 1 1 100%;
+          .pictureSize {
+            img {
+            }
           }
         }
       }

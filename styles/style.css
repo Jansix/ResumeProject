@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +31,7 @@ html {
   --footer-bgc: #d9ffd8;
   --table-font-hover: #101010;
   --icon-color: #101010;
+  --card-bgc: #e4f1e4;
 }
 
 .toChang {
@@ -44,6 +46,7 @@ html {
   --footer-bgc: rgba(143, 234, 255, 1);
   --table-font-hover: #101010;
   --icon-color: rgb(184, 255, 222);
+  --card-bgc: rgba(247, 237, 215, 1);
 }
 
 .hamburger {
@@ -63,6 +66,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--header-background-color);
 }
 body header {
   background-color: var(--header-background-color);
@@ -103,7 +107,6 @@ body header nav .moon-icon i {
 }
 body main section.main-area {
   min-height: 70vh;
-  background-color: var(--header-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,12 +172,10 @@ body main section.about-me div.progress-area p {
 body main section.resume {
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
-  background-color: var(--header-background-color);
+  padding: 2rem 2rem 0rem 2rem;
 }
 body main section.resume section.table {
   flex: 5 1 500px;
-  padding: 2rem;
   z-index: 1;
 }
 body main section.resume section.table table {
@@ -239,6 +240,86 @@ body main section.resume section.picture div.greenRect3 {
   left: -100px;
   z-index: -1;
 }
+body main section.resume section.picture div.greenRect-no {
+  display: none;
+}
+body main section.demo {
+  scroll-margin-top: 100px;
+  display: flex;
+  margin: 2rem auto;
+  max-width: 1440px;
+  flex-wrap: wrap-reverse;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--card-bgc);
+}
+body main section.demo .description {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+body main section.demo .description ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  gap: 1.5rem;
+}
+body main section.demo .description ul li h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003470;
+}
+body main section.demo .description ul li p {
+  color: var(---table-font-hover);
+}
+body main section.demo .description ul li p .text-list {
+  font-weight: bold;
+  color: brown;
+  font-size: 1.2rem;
+}
+body main section.demo .description ul li {
+  position: relative;
+}
+body main section.demo .description ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  color: var(--header-background-color);
+  background-color: var(--nav-hover);
+  padding: 0.25rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+body main section.demo .description ul li a:hover {
+  transform: scale(1.1);
+}
+body main section.demo .description ul li a:active {
+  transform: scale(0.8);
+}
+body main section.demo .picture-demo {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body main section.demo .picture-demo .pictureSize {
+  margin: 2rem;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+body main section.demo .picture-demo .pictureSize img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
 body main footer .footer {
   position: relative;
   display: flex;
@@ -274,6 +355,14 @@ body main footer .footer .see {
   opacity: 100%;
 }
 
+@media (max-width: 1080px) {
+  body main section.resume section.picture {
+    display: none;
+  }
+  body main section.demo {
+    margin: 1.6rem 0.7rem;
+  }
+}
 @media screen and (max-width: 880px) {
   body header nav .active {
     left: 0;
@@ -330,6 +419,12 @@ body main footer .footer .see {
   body main section.resume section.picture div.greenRect2,
   body main section.resume section.picture div.greenRect3 {
     display: none;
+  }
+  body main section.demo .description {
+    flex: 1 1 100%;
+  }
+  body main section.demo .picture-demo {
+    flex: 1 1 100%;
   }
 }
 @media screen and (max-width: 500px) {
