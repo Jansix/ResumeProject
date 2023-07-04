@@ -173,6 +173,7 @@ body main section.resume {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 2rem 0rem 2rem;
+  scroll-margin-top: 100px;
 }
 body main section.resume section.table {
   flex: 5 1 500px;
@@ -340,6 +341,7 @@ body main footer .footer .icon {
   transition: all 1s ease;
   cursor: pointer;
   color: var(--bar-color);
+  z-index: 50;
 }
 body main footer .footer .icon i {
   font-size: 4rem;
