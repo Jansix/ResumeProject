@@ -105,6 +105,13 @@ body header nav .moon-icon i {
   font-size: 2rem;
   color: var(--icon-color);
 }
+body main .SideProject {
+  text-align: center;
+}
+body main .SideProject h1 {
+  font-weight: bold;
+  color: var(--nav-hover);
+}
 body main section.main-area {
   min-height: 70vh;
   display: flex;
@@ -146,6 +153,7 @@ body main section.main-area img {
   width: 30vw;
 }
 body main section.about-me {
+  scroll-margin-top: 100px;
   background-color: var(--about-me-color);
   padding: 5rem 2rem;
   display: flex;
@@ -213,6 +221,7 @@ body main section.resume section.picture {
 body main section.resume section.picture img {
   width: 90%;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 body main section.resume section.picture div.greenRect {
   width: 30vw;
@@ -243,6 +252,10 @@ body main section.resume section.picture div.greenRect3 {
 }
 body main section.resume section.picture div.greenRect-no {
   display: none;
+}
+body main .big {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 body main section.demo {
   scroll-margin-top: 100px;
@@ -296,6 +309,7 @@ body main section.demo .description ul li a {
   padding: 0.25rem 2rem;
   font-size: 1.5rem;
   border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 body main section.demo .description ul li a:hover {
   transform: scale(1.1);

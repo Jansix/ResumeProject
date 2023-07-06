@@ -108,6 +108,16 @@ body {
   }
 
   main {
+    .SideProject {
+      text-align: center;
+
+      h1 {
+        font-weight: bold;
+        color: var(--nav-hover);
+        samp {
+        }
+      }
+    }
     section.main-area {
       min-height: 70vh;
 
@@ -156,6 +166,7 @@ body {
     }
 
     section.about-me {
+      scroll-margin-top: 100px;
       background-color: var(--about-me-color);
       padding: 5rem 2rem;
       display: flex;
@@ -235,6 +246,7 @@ body {
         img {
           width: 90%;
           border-radius: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         div.greenRect {
@@ -271,7 +283,10 @@ body {
         }
       }
     }
-
+    .big {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
     section.demo {
       scroll-margin-top: 100px; //錨點定位往下移動100px
       display: flex;
@@ -326,7 +341,7 @@ body {
               padding: 0.25rem 2rem;
               font-size: 1.5rem;
               border-radius: 20px;
-
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
               &:hover {
                 transform: scale(1.1);
               }

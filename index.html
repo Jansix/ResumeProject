@@ -22,6 +22,7 @@
       crossorigin="anonymous"
     />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./ICONS/titleicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="./styles/bubbles.css" />
   </head>
@@ -30,19 +31,18 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#resume">關於Hugh</a></li>
-
           <li>
-            <a target="_blank" href="https://mern-project-client-ruby.vercel.app/">講座系統</a>
+            <a href="#">首頁</a>
           </li>
+          <li><a href="#resume">關於Hugh</a></li>
           <li>
             <a href="#myPorject">個人網站</a>
           </li>
           <li>
-            <a href="#course">課程系統</a>
+            <a href="#travel">旅遊官網</a>
           </li>
           <li>
-            <a href="#travel">旅遊官網</a>
+            <a href="#course">課程系統</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -80,7 +80,7 @@
       </section>
 
       <!-- 關於我-->
-      <section class="about-me">
+      <section class="about-me" id="resume">
         <div class="desc">
           <h2 style="margin-bottom: 1.5rem">關於我的一些事情</h2>
           <p>
@@ -96,7 +96,7 @@
         </div>
       </section>
       <!-- 自介表格 -->
-      <section class="resume" id="resume">
+      <section class="resume">
         <section class="table">
           <table>
             <tr class="table-top-line">
@@ -149,7 +149,7 @@
             <tr>
               <td style="font-size: 1.4rem; font-weight: bold">開發經驗</td>
               <td>
-                我製作過幾個網頁前端專案，用Figma畫出網頁架構、設計使用者UI/UX設計、以HTML做出基本網頁架構、CSS將網頁前端美化以及提升使用外觀。
+                我製作過幾個網頁前端專案，以Figma設計UI/UX及網頁架構，HTML、CSS切版，最後再撰寫JS增加網頁功能。
                 <hr />
                 也曾有獨立開發過一個MERN專案，架設server、編寫API並設計前端介面串接，前端使用React框架,後端透過Node.js搭配Express、MongoDB進行開發，並導入JWT的Stateless驗證的技術搭建會員登入系統。
                 <hr />
@@ -167,6 +167,9 @@
         </section>
       </section>
       <!-- 作品說明 -->
+      <div class="SideProject">
+        <h1><samp>Project</samp></h1>
+      </div>
       <section class="demo" id="myPorject">
         <div class="description">
           <div>
@@ -174,55 +177,25 @@
               <li><h2>個人網頁</h2></li>
               <li>
                 <p>
-                  此網頁使用原生 JavaScript、CSS 和 HTML 架設，除了基本頁面和樣式呈現外，還包含以下現代網頁常見功能： <br />
+                  <samp style="font-size: 1.2rem"
+                    >此網頁使用原生 JavaScript、CSS 和 HTML 架設，除了基本頁面和樣式呈現外，還包含以下現代網頁常見功能：</samp
+                  >
+                  <br />
                   <br />
 
-                  <samp class="text-list">- 完全響應式設計 (RWD)：</samp>
-                  網頁能夠根據不同設備的螢幕大小和解析度自動適應布局和樣式。
+                  <samp class="text-list">- 完全響應式設計(RWD)：</samp>
+                  網頁能根據不同設備大小和解析度自動適應布局和樣式。
                   <br />
-                  <samp class="text-list">- 摺疊選單 (hamburger)：</samp>提供了一個可折疊的菜單，提升了用戶體驗和導航的便利性。 <br />
-                  <samp class="text-list">- 明暗模式切換 (Dark Mode)：</samp>提供明亮和暗黑兩種主題模式供用戶選擇，以適應不同的環境和用戶喜好。
+                  <samp class="text-list">- 摺疊選單(hamburger)：</samp>提供可折疊的菜單，增加導航的便利性。 <br />
+                  <samp class="text-list">- 明暗模式切換(Dark Mode)：</samp>設計明暗兩種主題模式供用戶選擇，以適應不同的環境和用戶喜好。
                   <br />
-                  <samp class="text-list">- 回到頁首按鈕 (BackToTop)：</samp>提供了一個便捷的按鈕，使用戶能夠快速回到頁面頂部。 <br />
-                  <samp class="text-list">- 段落錨點 (anchor)：</samp>點擊錨點後自動跳轉到指定段落，讓用戶能在網頁載入後迅速找到需要的資訊。
+                  <samp class="text-list">- 回到頁首按鈕(BackToTop)：</samp>放置便捷按鈕，使用戶能夠快速回到頁面頂部。 <br />
+                  <samp class="text-list">- 段落錨點(anchor)：</samp>設置錨點自動跳轉到指定段落，提升用戶體驗。
                   <br />
                 </p>
               </li>
               <li>
-                <a href="">專案詳細說明</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="picture-demo">
-          <div class="pictureSize">
-            <img src="./pictures/messageImage_1688444617509.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-      <section class="demo" id="course">
-        <div class="description">
-          <div>
-            <ul>
-              <li><h2>個人網頁</h2></li>
-              <li>
-                <p>
-                  此網頁使用原生 JavaScript、CSS 和 HTML 架設，除了基本頁面和樣式呈現外，還包含以下現代網頁常見功能： <br />
-                  <br />
-
-                  <samp class="text-list">- 完全響應式設計 (RWD)：</samp>
-                  網頁能夠根據不同設備的螢幕大小和解析度自動適應布局和樣式。
-                  <br />
-                  <samp class="text-list">- 摺疊選單 (hamburger)：</samp>提供了一個可折疊的菜單，提升了用戶體驗和導航的便利性。 <br />
-                  <samp class="text-list">- 明暗模式切換 (Dark Mode)：</samp>提供明亮和暗黑兩種主題模式供用戶選擇，以適應不同的環境和用戶喜好。
-                  <br />
-                  <samp class="text-list">- 回到頁首按鈕 (BackToTop)：</samp>提供了一個便捷的按鈕，使用戶能夠快速回到頁面頂部。 <br />
-                  <samp class="text-list">- 段落錨點 (anchor)：</samp>點擊錨點後自動跳轉到指定段落，讓用戶能在網頁載入後迅速找到需要的資訊。
-                  <br />
-                </p>
-              </li>
-              <li>
-                <a href="">專案詳細說明</a>
+                <a target="_blank" href="https://github.com/Jansix/ResumeProject">Go To Github</a>
               </li>
             </ul>
           </div>
@@ -237,32 +210,72 @@
         <div class="description">
           <div>
             <ul>
-              <li><h2>個人網頁</h2></li>
+              <li><h2>traveler客製化行程</h2></li>
               <li>
                 <p>
-                  此網頁使用原生 JavaScript、CSS 和 HTML 架設，除了基本頁面和樣式呈現外，還包含以下現代網頁常見功能： <br />
+                  <samp style="font-size: 1.2rem"
+                    >旅遊網站以React為框架，開發此網站我了解到前端框架應用、SPA網頁優勢、虛擬DOM的操作、且更加熟練使用JS處理網頁邏輯，並同時加入EmailJS、AOS、firebase等套件完成網站需求。</samp
+                  >
+                  <br />
                   <br />
 
-                  <samp class="text-list">- 完全響應式設計 (RWD)：</samp>
-                  網頁能夠根據不同設備的螢幕大小和解析度自動適應布局和樣式。
+                  <samp class="text-list">- 開發環境：</samp>
+                  React前端框架開發，用react-router-dom處理路由，並透過組件化的方式將元件重複利用提升專案可維護性。
                   <br />
-                  <samp class="text-list">- 摺疊選單 (hamburger)：</samp>提供了一個可折疊的菜單，提升了用戶體驗和導航的便利性。 <br />
-                  <samp class="text-list">- 明暗模式切換 (Dark Mode)：</samp>提供明亮和暗黑兩種主題模式供用戶選擇，以適應不同的環境和用戶喜好。
+                  <samp class="text-list">- 樣式設計：</samp>此專案選用TailwindCSS作為樣式處理工具。 <br />
+                  <samp class="text-list">- 動態渲染：</samp>透過JS取用Json資料對頁面進行渲染，提升網頁靈活性。
                   <br />
-                  <samp class="text-list">- 回到頁首按鈕 (BackToTop)：</samp>提供了一個便捷的按鈕，使用戶能夠快速回到頁面頂部。 <br />
-                  <samp class="text-list">- 段落錨點 (anchor)：</samp>點擊錨點後自動跳轉到指定段落，讓用戶能在網頁載入後迅速找到需要的資訊。
+                  <samp class="text-list">- 資料庫：</samp>採用firebase模擬後端儲存用戶資料。 <br />
+
+                  <samp class="text-list">- 其他套件與運用：</samp>自動郵件系統EmailJS、網頁動畫AOS、GoogleMap嵌入。
                   <br />
                 </p>
               </li>
               <li>
-                <a href="">專案詳細說明</a>
+                <a target="_blank" href="https://github.com/Jansix/MERN_project_client">Go To Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="picture-demo">
+          <div class="pictureSize"><img src="./pictures/旅遊網站.jpg" style="border: 1px solid brown" /></div>
+        </div>
+      </section>
+      <section class="demo" id="course">
+        <div class="description">
+          <div>
+            <ul>
+              <li><h2>課程系統</h2></li>
+              <li>
+                <p>
+                  <samp style="font-size: 1.2rem"
+                    >此專案為MERN專案，以MongoDB資料庫、Express伺服器框架、React前端框架、NodeJS後端伺服器搭建而成。功能包含用戶註冊、登入、新增/刪除課程、選課、搜尋等。</samp
+                  >
+                  <br />
+                  <br />
+
+                  <samp class="text-list">- 前端技術：</samp>
+                  使用<samp class="big">Bootstrap</samp> 框架建立響應式使用者介面，透過<samp class="big">Axios</samp>發送 AJAX請求與後端通信，使用
+                  React 構建動態的前端應用，根據不同的用戶身分處理可看見的畫面，並使用<samp class="big">localStorage</samp
+                  >儲存用戶狀態以提供持久性登入體驗。
+                  <br />
+                  <br />
+                  <samp class="text-list">- 後端技術：</samp>以<samp class="big">REST</samp>架構設計API，透過<samp class="big">cors</samp
+                  >解決跨域問題，<samp class="big">joi</samp
+                  >用以驗證資料是否符合格式，另外後端除CRUD外，主要側重在用戶帳號相關的驗證機制上，系統採用<samp class="big">bcrypt</samp
+                  >對用戶密碼進行雜湊加密，以<samp class="big">jsonwebtoken</samp>方式實現<samp class="big">無狀態</samp
+                  >身分驗證，提升資料安全性。<br />
+                </p>
+              </li>
+              <li>
+                <a target="_blank" href="https://github.com/Jansix/Traveler-React">Go To Github</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="picture-demo">
           <div class="pictureSize">
-            <img src="./pictures/messageImage_1688444617509.jpg" alt="" />
+            <img src="./pictures/學習網.jpg" alt="" style="border: 1px solid brown" />
           </div>
         </div>
       </section>
