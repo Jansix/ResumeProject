@@ -296,14 +296,14 @@ body main section.demo .description ul li p .text-list {
 }
 body main section.demo .description ul li {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
 }
 body main section.demo .description ul li a {
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: -20px;
   color: var(--header-background-color);
   background-color: var(--nav-hover);
   padding: 0.25rem 2rem;
